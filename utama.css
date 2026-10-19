@@ -1,0 +1,38 @@
+body{
+    background-color: palevioletred;
+}
+.deskripsi{
+    display: flex;
+    
+}
+.button{
+    padding: 30px;
+    border-bottom: 3px solid grey;
+}
+#gambar{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    
+}
+.test{
+    background-color: palevioletred;
+    width: 50%;
+    
+}
+
+
+
+    
+
+.template  {
+    display: flex;
+    justify-content: space-between;
+}
+.template img{
+    max-width: 400px;
+}
+#alert{
+    border-radius: 4px;
+    background-color: pink;
+}
