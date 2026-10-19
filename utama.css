@@ -1,38 +1,181 @@
-body{
-    background-color: palevioletred;
-}
-.deskripsi{
-    display: flex;
-    
-}
-.button{
-    padding: 30px;
-    border-bottom: 3px solid grey;
-}
-#gambar{
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-    
-}
-.test{
-    background-color: palevioletred;
-    width: 50%;
-    
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --cream: #f8f4ec;
+    --paper: #fffdf8;
+    --brown: #49352b;
+    --terracotta: #b66d4e;
+    --muted: #88796d;
+    --line: #e8ded2;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
 
-    
+body {
+    background-color: var(--cream);
+    color: var(--brown);
+    font-family: 'DM Sans', sans-serif;
+}
 
-.template  {
+/* HEADER / TEMPLATE */
+
+.template {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: var(--paper);
+    border-bottom: 1px solid var(--line);
 }
-.template img{
+
+.template h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 27px;
+}
+
+.template span {
+    color: var(--terracotta);
+}
+
+.template img {
     max-width: 400px;
 }
-#alert{
-    border-radius: 4px;
-    background-color: pink;
+
+/* DESKRIPSI HALAMAN */
+
+.deskripsi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 65px 8%;
+}
+
+.test {
+    width: 50%;
+    background-color: transparent;
+}
+
+.test h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(35px, 4vw, 55px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.test p {
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+/* GAMBAR DESTINASI */
+
+#gambar {
+    display: block;
+    width: 50%;
+    max-width: 500px;
+    height: 420px;
+    object-fit: cover;
+    margin-top: 0;
+    border-radius: 180px 180px 8px 8px;
+    box-shadow: 0 20px 45px rgba(73, 53, 43, 0.12);
+}
+
+/* PILIHAN DESTINASI */
+
+.button {
+    padding: 30px 8%;
+    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    background-color: var(--paper);
+}
+
+.button h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.button p {
+    color: var(--muted);
+    margin-bottom: 22px;
+    line-height: 1.7;
+}
+
+/* TOMBOL */
+
+.button button {
+    padding: 12px 22px;
+    margin: 5px 8px 5px 0;
+    background-color: transparent;
+    color: var(--brown);
+    border: 1px solid #d9c7b7;
+    border-radius: 30px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button button:hover {
+    background-color: var(--brown);
+    border-color: var(--brown);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ALERT / TOMBOL AKSI */
+
+#alert {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--terracotta);
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#alert:hover {
+    background-color: var(--brown);
+}
+
+
+
+@media (max-width: 700px) {
+    .template {
+        padding: 20px 6%;
+    }
+
+    .deskripsi {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 6%;
+        gap: 30px;
+    }
+
+    .test {
+        width: 100%;
+    }
+
+    #gambar {
+        width: 100%;
+        max-width: none;
+        height: 350px;
+    }
+
+    .button {
+        padding: 30px 6%;
+    }
 }
